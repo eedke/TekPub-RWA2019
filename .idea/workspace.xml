@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e81349fb-e96a-4c5a-b710-0e419caf86d1" name="Default Changelist" comment="" />
+    <list default="true" id="e81349fb-e96a-4c5a-b710-0e419caf86d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_12_18_095643_create_carts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/menu/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vebsajt.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_12_113646_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_12_113646_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menu/menu.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +24,10 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -114,6 +130,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -156,6 +173,13 @@
       <workItem from="1576150497760" duration="332000" />
       <workItem from="1576151002910" duration="245000" />
       <workItem from="1576153598310" duration="6000" />
+      <workItem from="1576500303951" duration="657000" />
+      <workItem from="1576572679469" duration="1493000" />
+      <workItem from="1576662726938" duration="1190000" />
+      <workItem from="1578471953953" duration="2989000" />
+      <workItem from="1578478340463" duration="820000" />
+      <workItem from="1578640398448" duration="236000" />
+      <workItem from="1578643795490" duration="468000" />
     </task>
     <servers />
   </component>
@@ -163,9 +187,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1576153599014">
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578640428324">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1576153599014" />
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1578640428324" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1576572763164">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1576572763164" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1578643808751">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578643808751" />
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576500840650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1576500840650" />
   </component>
 </project>
