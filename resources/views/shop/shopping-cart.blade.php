@@ -12,10 +12,10 @@
                                 <strong>{{ $product['item']['title'] }}</strong>
                                 <span class="badge badge-success">{{ $product['price'] }} KM</span>
                                 <div class="btn-group">
-
-                                            <a href="{{ route('product.increaseByOne', ['id' => $product['item']['id']]) }}"><i class="fas fa-plus-circle"></i></a>
-                                            <a href="{{ route('product.reduceByOne', ['id' => $product['item']['id']]) }}"><i class="fas fa-minus-circle"></i></a>
-                                            <a href="{{ route('product.removeItem', ['id' => $product['item']['id']]) }}"><i class="fas fa-trash-alt"></i></a>
+                                    &nbsp
+                                            <a href="{{ route('product.increaseByOne', ['id' => $product['item']['id']]) }}"><i class="fas fa-plus-circle">&nbsp</i></a>
+                                            <a href="{{ route('product.reduceByOne', ['id' => $product['item']['id']]) }}"><i class="fas fa-minus-circle">&nbsp</i></a>
+                                            <a href="{{ route('product.removeItem', ['id' => $product['item']['id']]) }}"><i class="fas fa-trash-alt">&nbsp</i></a>
 
                                 </div>
                             </li>
