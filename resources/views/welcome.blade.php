@@ -61,7 +61,7 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading" style="text-shadow: 6px 6px 0px rgba(0,0,0,0.8);">TekPub</div>
-        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/menu">Naručite Odmah!</a>
+      <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('product.index') }}">Naručite Odmah!</a>
         <div class="intro-lead-in"><br></div>
       </div>
     </div>
