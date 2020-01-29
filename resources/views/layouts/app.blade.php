@@ -42,6 +42,7 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
+                    @yield('navbar')
                     <li class="nav-item">
                         <a href="{{ route('product.shoppingCart') }}" class="nav-link">
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>

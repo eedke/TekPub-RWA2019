@@ -1,5 +1,16 @@
 @extends('layouts.app')
 
+@section('navbar')
+    <li class="nav-item">
+        <a href="{{ route('product.index') }}" class="nav-link">
+            <i class="fas fa-book-open"></i>
+            Menu
+            <span
+                class="badge badge-secondary">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+        </a>
+    </li>
+@endsection
+
 @section('content')
     <div class="container">
         @if(Session::has('cart'))
@@ -13,9 +24,12 @@
                                 <span class="badge badge-success">{{ $product['price'] }} KM</span>
                                 <div class="btn-group">
                                     &nbsp
-                                            <a href="{{ route('product.increaseByOne', ['id' => $product['item']['id']]) }}"><i class="fas fa-plus-circle">&nbsp</i></a>
-                                            <a href="{{ route('product.reduceByOne', ['id' => $product['item']['id']]) }}"><i class="fas fa-minus-circle">&nbsp</i></a>
-                                            <a href="{{ route('product.removeItem', ['id' => $product['item']['id']]) }}"><i class="fas fa-trash-alt">&nbsp</i></a>
+                                    <a href="{{ route('product.increaseByOne', ['id' => $product['item']['id']]) }}"><i
+                                            class="fas fa-plus-circle">&nbsp</i></a>
+                                    <a href="{{ route('product.reduceByOne', ['id' => $product['item']['id']]) }}"><i
+                                            class="fas fa-minus-circle">&nbsp</i></a>
+                                    <a href="{{ route('product.removeItem', ['id' => $product['item']['id']]) }}"><i
+                                            class="fas fa-trash-alt">&nbsp</i></a>
 
                                 </div>
                             </li>
