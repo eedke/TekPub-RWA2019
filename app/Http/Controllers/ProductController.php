@@ -74,6 +74,13 @@ class ProductController extends Controller
 
         return redirect()->route('product.shoppingCart');
     }
+    public function getRemoveAll(){
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart = new Cart($oldCart);
+        Session::forget('cart');
+        return redirect()->route('product.shoppingCart');
+
+    }
 
     public function getCart()
     {

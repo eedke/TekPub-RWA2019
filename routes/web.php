@@ -23,6 +23,8 @@ Route::get('/increase/{id}', 'ProductController@getIncreaseByOne')->name('produc
 
 Route::get('/remove/{id}', 'ProductController@getRemoveItem')->name('product.removeItem');
 
+Route::get('/removeAll', 'ProductController@getRemoveAll')->name('product.removeAll');
+
 Route::get('/shopping-cart', 'ProductController@getCart')->name('product.shoppingCart');
 
 Route::get('/checkout', 'ProductController@getCheckout')->name('checkout')->middleware('auth');
@@ -34,10 +36,8 @@ Route::get('/user/profile', 'UserController@getProfile')->name('user.profile')->
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/menu', 'ProductController@getIndex')->name('product.index');
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/menu', 'ProductController@getIndex')->name('product.index');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')/*->middleware('can:manage-users')*/->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);

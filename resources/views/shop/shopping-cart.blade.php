@@ -5,8 +5,6 @@
         <a href="{{ route('product.index') }}" class="nav-link">
             <i class="fas fa-book-open"></i>
             Menu
-            <span
-                class="badge badge-secondary">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
         </a>
     </li>
 @endsection
@@ -41,12 +39,14 @@
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
                     <strong>Total: {{ $totalPrice }} KM</strong>
-                </div>
+
+                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
                     <a href="{{ route('checkout') }}" type="button" class="btn btn-success">Checkout</a>
+                    <a href="{{ route('product.removeAll')}}" type="button" class="btn btn-danger" onclick="myFunction()">Isprazni košaricu</a>
                 </div>
             </div>
         @else
