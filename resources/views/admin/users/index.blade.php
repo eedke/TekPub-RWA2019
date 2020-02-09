@@ -22,7 +22,9 @@
                                 @foreach($users as $user)
                                     <tr>
                                         <th scope="row">{{ $user->id }}</th>
-                                        <td><a href="">{{ $user->name }}</a></td>
+                                        @can('view-users')
+                                        <td><a href="{{ url('user/view/'.$user->id) }}">{{ $user->name }}</a></td>
+                                        @endcan
                                         <td>{{ $user->email }}</td>
                                         <td>{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</td>
                                         <td>

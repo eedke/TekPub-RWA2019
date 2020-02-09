@@ -7,6 +7,7 @@ use App\User;
 use App\Role;
 use Gate;
 use Illuminate\Http\Request;
+use Auth;
 
 class UsersController extends Controller
 {
@@ -46,6 +47,7 @@ class UsersController extends Controller
             'roles' => $roles
         ]);
     }
+     
 
     /**
      * Update the specified resource in storage.

@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Auth;
 use Illuminate\Http\Request;
+use Gate;
+use App\User;
 
 class UserController extends Controller
 {
@@ -16,4 +19,24 @@ class UserController extends Controller
         });
         return view('user.profile', ['orders' => $orders]);
     }
+
+    public function getView($id)
+    {
+        if(Gate::denies('view-users')){
+            return redirect(route('admin.users.index'));
+        }
+        $user = User::find($id);
+
+        $orders = $user->orders;
+        $orders->transform(function ($order, $key) {
+            $order->cart = unserialize($order->cart);
+            return $order;
+        });
+
+        return view('admin.users.view')->with([
+            'user' => $user,
+            'orders' => $orders
+        ]);
+    }
+
 }
