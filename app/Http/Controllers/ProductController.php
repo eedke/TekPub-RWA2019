@@ -14,8 +14,21 @@ use Stripe\Charge;
 use Stripe\Token;
 use Stripe\Stripe;
 
+
 class ProductController extends Controller
 {
+ public function getSearchCategory($val){
+
+
+    $product = Product::where ( 'type', 'LIKE', '%' . $val . '%' )->get ();
+    if (count ( $product ) > 0)
+        return view ( 'shop.searchCategory' )->withDetails ( $product )->withQuery ( $val );
+    else
+        return view ( 'shop.searchCategory' )->withMessage ( 'No Details found. Try to search again !' );
+
+ }
+
+
     public function getIndex()
     {
         $products = Product::all();

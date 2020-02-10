@@ -7,6 +7,29 @@
             Menu
         </a>
     </li>
+
+    <form action="/search" method="POST" role="search">
+        {{ csrf_field() }}
+        <div class="input-group">
+            <input type="text" class="form-control" name="q"
+                placeholder="Pretraži... "> <span class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                    <i class="fas fa-search"></i>
+                </button>
+            </span>
+        </div>
+    </form>
+
+    <div class="dropdown show">
+        <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Kategorije
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="{{route('productCategory.search', $val = '1') }}">Hrana</a>
+          <a class="dropdown-item" href="{{route('productCategory.search', $val = '11') }}">Piće</a>
+        </div>
+      </div>
 @endsection
 
 @section('content')
@@ -17,6 +40,7 @@
                     <ul class="list-group">
                         @foreach($products as $product)
                             <li class="list-group-item">
+                            <img src="{{ $product['item']['imagePath']}}" style="max-height:60px;">&nbsp;
                                 <span class="badge badge-secondary float-right">{{ $product['qty'] }}</span>
                                 <strong>{{ $product['item']['title'] }}</strong>
                                 <span class="badge badge-success">{{ $product['price'] }} KM</span>

@@ -29,18 +29,10 @@
 
 
 
-    @if(Session::has('success'))
-        <div class="row justify-content-center">
-            <div class="col-sm-6 col-md-4">
-                <div id="charge-message" class="alert alert-success">
-                    {{ Session::get('success') }}
-                </div>
-            </div>
-        </div>
-    @endif
     <div class="container">
         <div class="row">
-            @foreach ($products as $product)
+            @if(isset($details))
+                @foreach($details as $product)
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail border border-dark rounded p-2 m-2">
                         <img src="{{$product->imagePath}}" alt="..." class="img-thumbnail img-fluid">
@@ -55,7 +47,13 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+                @endforeach
+
+          @endif
+
+
+
+
         </div>
     </div>
 

@@ -29,8 +29,6 @@
 
   <!-- Navigation -->
 
-
-
       <div class="navbar flex-center position-ref full-height float-right" style="font-size:20px;">
             @if (Route::has('login'))
                 <div class="top-right links">

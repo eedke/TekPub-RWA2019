@@ -11,6 +11,10 @@
 |
 */
 
+use App\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -44,3 +48,15 @@ Route::get('user/view/{id}', 'UserController@getView');
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
+
+Route::post('/search','ProductController@getSearch')->name('product.search');
+
+Route::any ( '/search', function () {
+    $q = \Request::get ( 'q' );
+    $product = Product::where ( 'title', 'LIKE', '%' . $q . '%' )->orWhere ( 'description', 'LIKE', '%' . $q . '%' )->get ();
+    if (count ( $product ) > 0)
+        return view ( 'shop.search' )->withDetails ( $product )->withQuery ( $q );
+    else
+        return view ( 'shop.search' )->withMessage ( 'No Details found. Try to search again !' );
+} );
+Route::get('/search/{id}', 'ProductController@getSearchCategory')->name('productCategory.search');
