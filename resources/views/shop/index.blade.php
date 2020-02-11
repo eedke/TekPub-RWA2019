@@ -48,7 +48,7 @@
                             <h3>{{ $product->title }}</h3>
                             <p class="description">{{$product->description}}</p>
                             <div class="clearfix">
-                                <div class="float-left price">{{ $product->price }} KM</div>
+                                <div class="float-left price"><strong>{{ $product->price }} KM</strong></div>
                                 <a href="{{ route('product.addToCart', ['id' => $product->id]) }}"
                                    class="btn btn-success float-right" role="button">Add to Cart</a>
                             </div>

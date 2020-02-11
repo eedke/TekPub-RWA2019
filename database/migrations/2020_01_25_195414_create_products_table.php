@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->float('price');
             $table->integer('amount');
             $table->string('type');
+            $table->string('subtype');
             $table->timestamps();
         });
     }
