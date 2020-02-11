@@ -53,7 +53,7 @@ Route::post('/search','ProductController@getSearch')->name('product.search');
 
 Route::any ( '/search', function () {
     $q = \Request::get ( 'q' );
-    $product = Product::where ( 'title', 'LIKE', '%' . $q . '%' )->orWhere ( 'description', 'LIKE', '%' . $q . '%' )->get ();
+    $product = Product::where ( 'title', 'LIKE', '%' . $q . '%' )->orWhere ( 'description', 'LIKE', '%' . $q . '%' )->orWhere ( 'subtype', 'LIKE', '%' . $q . '%' )->get ();
     if (count ( $product ) > 0)
         return view ( 'shop.search' )->withDetails ( $product )->withQuery ( $q );
     else

@@ -13,14 +13,14 @@
     </div>
 </form>
 
-<div class="dropdown show">
-    <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="dropdown show bg-dark">
+    <a class="btn btn-secondary btn-sm dropdown-toggle bg-dark" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Kategorije
     </a>
 
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="{{route('productCategory.search', $val = '1') }}">Hrana</a>
-      <a class="dropdown-item" href="{{route('productCategory.search', $val = '11') }}">Piće</a>
+    <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = '1') }}" style="color:#a6a6a6">Hrana</a>
+      <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = '11') }}" style="color:#a6a6a6">Piće</a>
     </div>
   </div>
 @endsection
@@ -42,18 +42,19 @@
         <div class="row">
             @foreach ($products as $product)
                 <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail border border-dark rounded p-2 m-2">
-                        <img src="{{$product->imagePath}}" alt="..." class="img-thumbnail img-fluid">
-                        <div class="caption">
-                            <h3>{{ $product->title }}</h3>
-                            <p class="description">{{$product->description}}</p>
-                            <div class="clearfix">
-                                <div class="float-left price"><strong>{{ $product->price }} KM</strong></div>
-                                <a href="{{ route('product.addToCart', ['id' => $product->id]) }}"
-                                   class="btn btn-success float-right" role="button">Add to Cart</a>
+                    <div class="card-deck">
+                    <div class="card bg-dark border-warning mb-3 text-white" style="width: 22rem;">
+                        <img class="card-img-top" src="{{$product->imagePath}}" alt="{{$product->title}}">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ $product->title }}</h3>
+                            <p class="card-text"><span style="color: #a9a9a9; ">{{$product->description}}</span></p>
+                            <div class="card-footer bg-transparent border-warning">
+                                <h6 class="float-left"><span style="color: #DCDCDC; ">{{$product->subtype}}</span></h6>
+                            <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn float-right btn-primary">Add to Cart</a>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             @endforeach
         </div>

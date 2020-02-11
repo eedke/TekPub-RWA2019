@@ -3,8 +3,8 @@
 @section('navbar')
 <form action="/search" method="POST" role="search">
     {{ csrf_field() }}
-    <div class="input-group">
-        <input type="text" class="form-control" name="q"
+    <div class="input-group bg-dark">
+        <input type="text" class="form-control bg-dark" name="q"
             placeholder="Pretraži... "> <span class="input-group-btn">
             <button type="submit" class="btn btn-default">
                 <i class="fas fa-search"></i>
@@ -13,14 +13,14 @@
     </div>
 </form>
 
-<div class="dropdown show">
+<div class="dropdown show bg-dark">
     <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Kategorije
     </a>
 
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item" href="{{route('productCategory.search', $val = 'Food') }}">Hrana</a>
-      <a class="dropdown-item" href="{{route('productCategory.search', $val = 'Drinks') }}">Piće</a>
+    <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:#a6a6a6">Hrana</a>
+      <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}"style="color:#a6a6a6">Piće</a>
     </div>
   </div>
 @endsection
@@ -32,21 +32,22 @@
     <div class="container">
         <div class="row">
             @if(isset($details))
-            <div class="card w-100">
-                <p> The Search results for your query <b> {{ $query }} </b> are :</p>
+            <div class="card w-100 bg-dark">
+                <p style="color: #DCDCDC"> The Search results for your query <b> {{ $query }} </b> are :</p>
             </div>
 
                 @foreach($details as $product)
                 <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail border border-dark rounded p-2 m-2">
-                        <img src="{{$product->imagePath}}" alt="..." class="img-thumbnail img-fluid">
-                        <div class="caption">
-                            <h3>{{ $product->title }}</h3>
-                            <p class="description">{{$product->description}}</p>
-                            <div class="clearfix">
-                                <div class="float-left price">{{ $product->price }} KM</div>
-                                <a href="{{ route('product.addToCart', ['id' => $product->id]) }}"
-                                   class="btn btn-success float-right" role="button">Add to Cart</a>
+                    <div class="card-deck">
+                        <div class="card bg-dark border-warning mb-3 text-white" style="width: 22rem;">
+                            <img class="card-img-top" src="{{$product->imagePath}}" alt="{{$product->title}}">
+                            <div class="card-body">
+                                <h3 class="card-title">{{ $product->title }}</h3>
+                                <p class="card-text"><span style="color: #a9a9a9; ">{{$product->description}}</span></p>
+                                <div class="card-footer bg-transparent border-warning">
+                                    <h6 class="float-left"><span style="color: #DCDCDC; ">{{$product->subtype}}</span></h6>
+                                    <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn float-right btn-primary">Add to Cart</a>
+                                </div>
                             </div>
                         </div>
                     </div>

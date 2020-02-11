@@ -20,14 +20,14 @@
         </div>
     </form>
 
-    <div class="dropdown show">
+    <div class="dropdown show bg-dark">
         <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Kategorije
         </a>
 
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="{{route('productCategory.search', $val = 'Food') }}">Hrana</a>
-          <a class="dropdown-item" href="{{route('productCategory.search', $val = 'Drinks') }}">Piće</a>
+        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:#a6a6a6">Hrana</a>
+          <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:#a6a6a6">Piće</a>
         </div>
       </div>
 @endsection
@@ -37,12 +37,12 @@
         @if(Session::has('cart'))
             <div class="row justify-content-center">
                 <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                    <ul class="list-group">
+                    <ul class="list-group bg-dark">
                         @foreach($products as $product)
-                            <li class="list-group-item">
+                            <li class="list-group-item bg-dark">
                             <img src="{{ $product['item']['imagePath']}}" style="max-height:60px;">&nbsp;
                                 <span class="badge badge-secondary float-right">{{ $product['qty'] }}</span>
-                                <strong>{{ $product['item']['title'] }}</strong>
+                                <strong><span style="color: #DCDCDC; ">{{ $product['item']['title'] }}</span></strong>
                                 <span class="badge badge-success">{{ $product['price'] }} KM</span>
                                 <div class="btn-group">
                                     &nbsp
@@ -62,15 +62,15 @@
 
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                    <strong>Total: {{ $totalPrice }} KM</strong>
+                    <h4><span style="color: #DCDCDC; ">Total: {{ $totalPrice }} KM</span></h4>
 
                  </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                    <a href="{{ route('checkout') }}" type="button" class="btn btn-success">Checkout</a>
                     <a href="{{ route('product.removeAll')}}" type="button" class="btn btn-danger" onclick="myFunction()">Isprazni košaricu</a>
+                    <a href="{{ route('checkout') }}" type="button" class="btn btn-success">Checkout</a>
                 </div>
             </div>
         @else

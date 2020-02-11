@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -22,14 +21,15 @@
 
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
+    <link href="css/agencycss" rel="stylesheet">
 
 </head>
 
-<body id="page-top">
+<body style="background-color:#282c34;" id="page-top">
+
 
   <!-- Navigation -->
-
-      <div class="navbar flex-center position-ref full-height float-right" style="font-size:20px;">
+      <div class="navbar bg-dark flex-center position-ref full-height float-right" style="font-size:20px;">
             @if (Route::has('login'))
                 <div class="top-right links">
                 <a class="js-scroll-trigger" href="#contact">Kontakt</a>
@@ -58,7 +58,7 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-heading" style="text-shadow: 6px 6px 0px rgba(0,0,0,0.8);">TekPub</div>
+        <div class="intro-heading" style="text-shadow: 6px 6px 0px rgba(0,0,0,0.8);"><img src="https://i.ibb.co/GcVXxCp/LogoPng.png" alt="TekPub"style="width:150px">TekPub</div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{ route('product.index') }}">Naručite Odmah!</a>
         <div class="intro-lead-in"><br></div>
       </div>
@@ -71,7 +71,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Kontaktirajte nas</h2>
+          <h2 class="section-heading text-uppercase" style="color:#fed136">Kontaktirajte nas</h2>
           <h3 class="section-subheading text-muted"></h3>
         </div>
       </div>
@@ -80,22 +80,22 @@
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="row">
               <div class="col-md-6">
-                <div class="form-group">
-                  <input class="form-control" id="name" type="text" placeholder="Vaše ime *" required="required" data-validation-required-message="Please enter your name.">
+                <div class="form-group bg-dark">
+                  <input class="form-control bg-dark" id="name" type="text" placeholder="Vaše ime *" required="required" data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Vaš Email *" required="required" data-validation-required-message="Please enter your email address.">
+                  <input class="form-control bg-dark" id="email" type="email" placeholder="Vaš Email *" required="required" data-validation-required-message="Please enter your email address.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="phone" type="tel" placeholder="Vaš broj *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <input class="form-control bg-dark" id="phone" type="tel" placeholder="Vaš broj *" required="required" data-validation-required-message="Please enter your phone number.">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <textarea class="form-control" id="message" placeholder="Poruka *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                  <textarea class="form-control bg-dark" id="message" placeholder="Poruka *" required="required" data-validation-required-message="Please enter a message."></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
