@@ -44,8 +44,8 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a href="{{ route('product.shoppingCart') }}" class="nav-link">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <a href="{{ route('product.shoppingCart') }}" class="nav-link" style="color:white">
+                            <i class="fa fa-shopping-cart" style="color:white" aria-hidden="true"></i>
                             Shopping Cart
                             <span
                                 class="badge badge-secondary">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
@@ -54,30 +54,30 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}" style="color:white">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}" style="color:white">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
                         <li class="nav-item dropdown bg-dark">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle bg-dark" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color:white">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:#a6a6a6">
+                                <a class="dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:white">
                                     {{ __('Profile') }}
                                 </a>
                                 @can('manage-users')
-                                    <a class="dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:#a6a6a6">
+                                    <a class="dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:white">
                                        User Management
                                     </a>
                                 @endcan
                                 <hr>
-                                <a class="dropdown-item bg-dark" href="{{ route('logout') }}" style="color:#a6a6a6"
+                                <a class="dropdown-item bg-dark" href="{{ route('logout') }}" style="color:white"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}

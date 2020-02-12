@@ -17,6 +17,16 @@ use Stripe\Stripe;
 
 class ProductController extends Controller
 {
+    public function getSearch(){
+        $q = \Request::get ( 'q' );
+        $product = Product::where ( 'title', 'LIKE', '%' . $q . '%' )->orWhere ( 'description', 'LIKE', '%' . $q . '%' )->orWhere ( 'subtype', 'LIKE', '%' . $q . '%' )->get ();
+        if (count ( $product ) > 0)
+            return view ( 'shop.search' )->withDetails ( $product )->withQuery ( $q );
+        else
+            return view ( 'shop.search' )->withMessage ( 'No Details found. Try to search again !' );
+
+    }
+
  public function getSearchCategory($val){
 
 

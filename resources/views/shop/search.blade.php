@@ -1,28 +1,28 @@
 @extends('layouts.app')
 
 @section('navbar')
-<form action="/search" method="POST" role="search">
+    <form action="{{route('product.search') }}" method="POST" role="search">
     {{ csrf_field() }}
     <div class="input-group bg-dark">
-        <input type="text" class="form-control bg-dark" name="q"
+        <input type="text" style="color:white" class="form-control bg-dark" name="q"
             placeholder="Pretraži... "> <span class="input-group-btn">
             <button type="submit" class="btn btn-default">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search" style="color:white"></i>
             </button>
         </span>
     </div>
 </form>
 
 <div class="dropdown show bg-dark">
-    <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Kategorije
+    <a class="btn btn-secondary bg-dark btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Kategorije
     </a>
 
     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-      <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:#a6a6a6">Hrana</a>
-      <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}"style="color:#a6a6a6">Piće</a>
+        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Hrana</a>
+        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Piće</a>
     </div>
-  </div>
+</div>
 @endsection
 
 @section('content')
@@ -39,7 +39,7 @@
                 @foreach($details as $product)
                 <div class="col-sm-6 col-md-4">
                     <div class="card-deck">
-                        <div class="card bg-dark border-warning mb-3 text-white" style="width: 22rem;">
+                        <div class="card bg-dark border-warning mb-3 text-white">
                             <img class="card-img-top" src="{{$product->imagePath}}" alt="{{$product->title}}">
                             <div class="card-body">
                                 <h3 class="card-title">{{ $product->title }}</h3>

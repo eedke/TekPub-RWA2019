@@ -3,15 +3,15 @@
 @section('navbar')
     <li class="nav-item">
         <a href="{{ route('product.index') }}" class="nav-link">
-            <i class="fas fa-book-open"></i>
+            <i class="fas fa-book-open" style="color:white"></i>
             Menu
         </a>
     </li>
 
-    <form action="/search" method="POST" role="search">
+    <form action="{{route('product.search') }}" method="POST" role="search">
         {{ csrf_field() }}
-        <div class="input-group">
-            <input type="text" class="form-control" name="q"
+        <div class="input-group bg-dark">
+            <input type="text" style="color:white" class="form-control bg-dark" name="q"
                 placeholder="Pretraži... "> <span class="input-group-btn">
                 <button type="submit" class="btn btn-default">
                     <i class="fas fa-search"></i>
@@ -21,15 +21,15 @@
     </form>
 
     <div class="dropdown show bg-dark">
-        <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Kategorije
+        <a class="btn btn-secondary bg-dark btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Kategorije
         </a>
 
         <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:#a6a6a6">Hrana</a>
-          <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:#a6a6a6">Piće</a>
+            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Hrana</a>
+            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Piće</a>
         </div>
-      </div>
+    </div>
 @endsection
 
 @section('content')
@@ -76,7 +76,7 @@
         @else
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                    <h2>No items in cart.</h2>
+                    <h2 style="color:white">No items in cart.</h2>
                 </div>
             </div>
         @endif

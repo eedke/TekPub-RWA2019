@@ -51,12 +51,5 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
 
 Route::post('/search','ProductController@getSearch')->name('product.search');
 
-Route::any ( '/search', function () {
-    $q = \Request::get ( 'q' );
-    $product = Product::where ( 'title', 'LIKE', '%' . $q . '%' )->orWhere ( 'description', 'LIKE', '%' . $q . '%' )->orWhere ( 'subtype', 'LIKE', '%' . $q . '%' )->get ();
-    if (count ( $product ) > 0)
-        return view ( 'shop.search' )->withDetails ( $product )->withQuery ( $q );
-    else
-        return view ( 'shop.search' )->withMessage ( 'No Details found. Try to search again !' );
-} );
+
 Route::get('/search/{id}', 'ProductController@getSearchCategory')->name('productCategory.search');
