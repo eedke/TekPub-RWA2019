@@ -12,10 +12,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right" style="color:#a6a6a6">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right" style="color:#dcdcdc">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control bg-dark @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" style="color:#a6a6a6" type="email" class="form-control bg-dark @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +26,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right" style="color:#a6a6a6">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right" style="color:#dcdcdc">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control bg-dark @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="password" type="password" style="color:#a6a6a6" class="form-control bg-dark @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember" style="color:#a6a6a6">
+                                    <label class="form-check-label" for="remember" style="color:#dcdcdc">
                                         {{ __('Remember Me') }}
                                     </label>
                                 </div>

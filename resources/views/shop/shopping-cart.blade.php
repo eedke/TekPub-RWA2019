@@ -12,7 +12,7 @@
         {{ csrf_field() }}
         <div class="input-group bg-dark">
             <input type="text" style="color:white" class="form-control bg-dark" name="q"
-                placeholder="Pretraži... "> <span class="input-group-btn">
+                placeholder="Search... "> <span class="input-group-btn">
                 <button type="submit" class="btn btn-default">
                     <i class="fas fa-search"></i>
                 </button>
@@ -22,12 +22,12 @@
 
     <div class="dropdown show bg-dark">
         <a class="btn btn-secondary bg-dark btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Kategorije
+            Categories
         </a>
 
         <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Hrana</a>
-            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Piće</a>
+            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Food</a>
+            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Drinks</a>
         </div>
     </div>
 @endsection
@@ -69,7 +69,7 @@
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-                    <a href="{{ route('product.removeAll')}}" type="button" class="btn btn-danger" onclick="myFunction()">Isprazni košaricu</a>
+                    <a href="{{ route('product.removeAll')}}" type="button" class="btn btn-danger" onclick="myFunction()">Remove All Items from Cart</a>
                     <a href="{{ route('checkout') }}" type="button" class="btn btn-success">Checkout</a>
                 </div>
             </div>

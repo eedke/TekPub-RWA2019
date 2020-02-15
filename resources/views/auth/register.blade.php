@@ -12,10 +12,10 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right" style="color:#a6a6a6">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right" style="color:#dcdcdc">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control bg-dark @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus style="color:#6a6a6a">
+                                <input id="name" type="text" class="form-control bg-dark @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus style="color:#a6a6a6">
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -26,10 +26,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right" style="color:#a6a6a6">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right" style="color:#dcdcdc">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control bg-dark @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" style="color:#6a6a6a">
+                                <input id="email" type="email" class="form-control bg-dark @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" style="color:#a6a6a6">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -40,10 +40,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right" style="color:#a6a6a6">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right" style="color:#dcdcdc">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control bg-dark @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" style="color:#6a6a6a">
+                                <input id="password" type="password" class="form-control bg-dark @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" style="color:#a6a6a6">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -54,10 +54,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="color:#a6a6a6">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right" style="color:#dcdcdc">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control bg-dark" name="password_confirmation" required autocomplete="new-password" style="color:#6a6a6a">
+                                <input id="password-confirm" type="password" class="form-control bg-dark" name="password_confirmation" required autocomplete="new-password" style="color:#a6a6a6">
                             </div>
                         </div>
 

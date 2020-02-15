@@ -15,12 +15,12 @@
 
 <div class="dropdown show bg-dark">
     <a class="btn btn-secondary bg-dark btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Kategorije
+        Categories
     </a>
 
     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Hrana</a>
-        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Piće</a>
+        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Food</a>
+        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Drinks</a>
     </div>
 </div>
 @endsection

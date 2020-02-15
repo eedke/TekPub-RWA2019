@@ -15,12 +15,12 @@
 
 <div class="dropdown show bg-dark">
     <a class="btn btn-secondary bg-dark btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Kategorije
+        Categories
     </a>
 
     <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Hrana</a>
-        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Piće</a>
+        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Food</a>
+        <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Drinks</a>
     </div>
 </div>
 @endsection
@@ -43,12 +43,12 @@
             @foreach ($products as $product)
                 <div class="col-sm-6 col-md-4">
                     <div class="card-deck">
-                    <div class="card bg-dark border-warning mb-3 text-white" style="width: 22rem; height:32rem">
+                    <div class="card bg-dark border-warning mb-3 text-white" style="width: 22rem; height:31rem">
                         <img class="card-img-top" src="{{$product->imagePath}}" alt="{{$product->title}}">
                         <div class="card-body">
                             <h3 class="card-title">{{ $product->title }}</h3>
                             <p class="card-text"><span style="color: #a9a9a9; ">{{$product->description}}</span></p>
-                            <div class="card-footer bg-transparent border-warning">
+                            <div class="card-footer bg-transparent border-warning" style=" position:absolute; bottom:0px; left:0; width:100%; height:60px;">
                                 <h5 class="float-left"><span style="color:white; ">{{$product->price}}KM</span></h5>
                             <a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn float-right btn-primary">Add to Cart</a>
                             </div>
