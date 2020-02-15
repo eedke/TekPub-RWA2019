@@ -21,12 +21,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
-<body style="background-color:#282c34">
+<body style="background-color:#353942">
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm" style="border-bottom: 3px solid #ffcc00;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="https://i.ibb.co/RYJZGMS/Logo5-removebg-preview-1.png" height="35px" alt="TekPub">
+                <img src="https://i.ibb.co/GCf1kKs/logo.png" height="35px" alt="TekPub">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -44,8 +44,8 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a href="{{ route('product.shoppingCart') }}" class="nav-link" style="color:white">
-                            <i class="fa fa-shopping-cart" style="color:white" aria-hidden="true"></i>
+                        <a href="{{ route('product.shoppingCart') }}" class="nav-link" style="color:#ffcc00">
+                            <i class="fa fa-shopping-cart" style="color:#ffcc00" aria-hidden="true"></i>
                             Shopping Cart
                             <span
                                 class="badge badge-secondary">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
@@ -54,30 +54,30 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}" style="color:white">{{ __('Login') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}" style="color:#ffcc00">{{ __('Login') }}</a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}" style="color:white">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}" style="color:#ffcc00">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
                         <li class="nav-item dropdown bg-dark">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle bg-dark" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color:white">
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color:#ffcc00">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:white">
+                                <a class="dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:#ffcc00">
                                     {{ __('Profile') }}
                                 </a>
                                 @can('manage-users')
-                                    <a class="dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:white">
+                                    <a class="dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:#ffcc00">
                                        User Management
                                     </a>
                                 @endcan
                                 <hr>
-                                <a class="dropdown-item bg-dark" href="{{ route('logout') }}" style="color:white"
+                                <a class="dropdown-item bg-dark" href="{{ route('logout') }}" style="color:#ffcc00"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}

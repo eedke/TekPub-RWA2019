@@ -203,6 +203,7 @@
       <workItem from="1581501102935" duration="22000" />
       <workItem from="1581526514755" duration="4824000" />
       <workItem from="1581713693988" duration="7060000" />
+      <workItem from="1581777374415" duration="7442000" />
     </task>
     <task id="LOCAL-00001" summary="Detalji">
       <created>1580255824916</created>
@@ -235,6 +236,10 @@
     </state>
     <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580255821909" />
     <state x="222" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581361746997" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1581780672621">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581780672621" />
     <state x="521" y="134" key="FileChooserDialogImpl" timestamp="1581528211757">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

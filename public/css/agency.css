@@ -173,9 +173,9 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url("../img/header-bg.jpg");
-   filter: blur(1px);
-  -webkit-filter: blur(9px);
+  background-image: url("https://i.ibb.co/cL3sJ4c/background-20.jpg");
+   filter: blur(4px);
+  -webkit-filter: blur(4px);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -586,13 +586,15 @@ header.masthead .intro-text .intro-heading {
   margin-top: 0;
 }
 
-/*section#contact {
+section#contact {
 
-  background-image: url("../img/map-image.png");
+  background-image: url("https://i.ibb.co/rHzH91p/contact.jpg");
   background-repeat: no-repeat;
   background-position: center;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
 
-}*/
+}
 
 section#contact .section-heading {
   color: #fff;
