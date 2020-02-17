@@ -53,3 +53,6 @@ Route::post('/search','ProductController@getSearch')->name('product.search');
 
 
 Route::get('/search/{id}', 'ProductController@getSearchCategory')->name('productCategory.search');
+
+Route::get('contact-us', 'ContactUSController@contactUS');
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);

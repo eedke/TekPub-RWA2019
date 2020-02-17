@@ -53,7 +53,7 @@ class ProductController extends Controller
         $cart->add($product, $product->id);
 
         $request->session()->put('cart', $cart);
-        return redirect()->route('product.index');
+        return redirect()->route('product.shoppingCart');
     }
 
     public function getReduceByOne($id)
@@ -102,7 +102,6 @@ class ProductController extends Controller
         $cart = new Cart($oldCart);
         Session::forget('cart');
         return redirect()->route('product.shoppingCart');
-
     }
 
     public function getCart()
