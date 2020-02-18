@@ -58,7 +58,7 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-heading text-warning" style="text-shadow: 6px 6px 0px rgba(0,0,0,0.8);"><img src="https://i.ibb.co/GcVXxCp/LogoPng.png" alt="TekPub"style="width:150px">TekPub</div>
+        <div class="intro-heading text-warning" style="text-shadow: 6px 6px 0px rgba(0,0,0,0.8);">TekPub</div>
       <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="color:black" href="{{ route('product.index') }}">Order Now!</a>
         <div class="intro-lead-in"><br></div>
       </div>

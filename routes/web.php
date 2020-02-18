@@ -14,6 +14,7 @@
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use App\Mail\ContactMail;
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,14 +46,25 @@ Route::get('/menu', 'ProductController@getIndex')->name('product.index');
 
 Route::get('user/view/{id}', 'UserController@getView');
 
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
 });
 
-Route::post('/search','ProductController@getSearch')->name('product.search');
-
+Route::post('/search', 'ProductController@getSearch')->name('product.search');
 
 Route::get('/search/{id}', 'ProductController@getSearchCategory')->name('productCategory.search');
 
-Route::get('contact-us', 'ContactUSController@contactUS');
-Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
+Route::get('/orderAccept/{id}', 'ProductController@getOrderAccept');
+
+Route::get('/orderReject/{id}', 'ProductController@getOrderReject');
+
+Route::get('/orderComplete/{id}', 'ProductController@getOrderComplete');
+
+Route::get('/contact', function(){
+    return view('contact');
+});
+
+Route::post('/contact', function (Request $request){
+    Mail::send(new ContactMail($request));
+    return redirect('/');
+});

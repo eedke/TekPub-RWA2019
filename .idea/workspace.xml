@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e81349fb-e96a-4c5a-b710-0e419caf86d1" name="Default Changelist" comment="Detalji">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactUSController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/contactUS.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/email.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Vebsajt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Vebsajt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mail/ContactMail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/email/contactmail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ContactUS.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MenuController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shop/shopping-cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop/shopping-cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_01_28_120055_create_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_01_28_120055_create_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_17_190046_create_contact_us_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/contactUS.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,6 +211,9 @@
       <workItem from="1581713693988" duration="7060000" />
       <workItem from="1581777374415" duration="7442000" />
       <workItem from="1581965127717" duration="1312000" />
+      <workItem from="1582047289453" duration="1179000" />
+      <workItem from="1582048496725" duration="7831000" />
+      <workItem from="1582056435811" duration="133000" />
     </task>
     <task id="LOCAL-00001" summary="Detalji">
       <created>1580255824916</created>
@@ -229,10 +233,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="Detalji" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578640428324">
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1582056333730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1578640428324" />
+    <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1582056333730" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582050175725">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1582050175725" />
     <state x="452" y="68" width="645" height="688" key="#phpunit.xml" timestamp="1581422599006">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -246,10 +254,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581780672621" />
-    <state x="521" y="134" key="FileChooserDialogImpl" timestamp="1581528211757">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1582047643993">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1580240492598" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582047643993" />
     <state x="521" y="134" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581528211757" />
     <state x="518" y="288" key="NewPhpFileDialog" timestamp="1581966296051">
       <screen x="0" y="0" width="1366" height="728" />
@@ -263,10 +271,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580255835763" />
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1581965128846">
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582056458221">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581965128846" />
+    <state x="378" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582056458221" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580254919000">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

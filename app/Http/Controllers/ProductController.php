@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Cart;
 use App\Product;
 use App\Order;
+use App\User;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -159,13 +160,36 @@ class ProductController extends Controller
             $order->address = $request->input('address');
             $order->name = $request->input('name');
             $order->payment_id = $session->id;
+            $order->status = 0;
 
             Auth::user()->orders()->save($order);
         } catch (\Exception $e) {
             return redirect()->route('checkout')->with('error', $e->getMessage());
         }
 
+
+
         Session::forget('cart');
         return redirect()->route('product.index')->with('success', 'Successfully purchased products!');
+    }
+    public function getOrderAccept($id){
+        $order = Order::find($id);
+        $order->status = 1;
+        $order->save();
+        return back();
+    }
+
+    public function getOrderComplete($id){
+        $order = Order::find($id);
+        $order->status = 2;
+        $order->save();
+        return back();
+    }
+
+    public function getOrderReject($id){
+        $order = Order::find($id);
+        $order->status = 3;
+        $order->save();
+        return back();
     }
 }

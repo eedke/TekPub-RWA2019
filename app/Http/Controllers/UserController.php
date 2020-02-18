@@ -32,7 +32,7 @@ class UserController extends Controller
             $order->cart = unserialize($order->cart);
             return $order;
         });
-
+        $orders = $orders->reverse();
         return view('admin.users.view')->with([
             'user' => $user,
             'orders' => $orders
