@@ -192,4 +192,13 @@ class ProductController extends Controller
         $order->save();
         return back();
     }
+    public function getAllOrders(){
+        $orders = Order::all();
+        $orders->transform(function ($order, $key) {
+            $order->cart = unserialize($order->cart);
+            return $order;
+        });
+        $orders = $orders->reverse();
+        return view('admin.users.views')->with('orders', $orders);
+    }
 }

@@ -68,3 +68,4 @@ Route::post('/contact', function (Request $request){
     Mail::send(new ContactMail($request));
     return redirect('/');
 });
+Route::get('/AllOrders', 'ProductController@getAllOrders')->name('allOrders.views');

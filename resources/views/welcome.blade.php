@@ -29,29 +29,75 @@
 <body style="background-color:#353942;" id="page-top">
 
   <!-- Navigation -->
-      <div class="navbar bg-dark border-warning flex-center position-ref full-height float-right" style="font-size:20px; border-bottom: 3px solid #ffcc00;">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                <a class="js-scroll-trigger" href="#contact">Contact</a>
-                    &nbsp;
-                    <a class="js-scroll-trigger" href="vizija.pdf">Vision</a>
-                &nbsp;
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                        &nbsp;
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        &nbsp;
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm" style="border-bottom: 2px solid #ffcc00; font-size: 20px;">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                            &nbsp;
-                        @endif
-                    @endauth
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img src="https://i.ibb.co/GCf1kKs/logo.png" height="35px" alt="TekPub">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                </div>
-            @endif
-      </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav mr-auto">
+                @yield('navbar')
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="vizija.pdf" style="color:#ffcc00">Vision</a>
+
+                </li>
+                <!-- Authentication Links -->
+                @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}" style="color:#ffcc00">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}" style="color:#ffcc00">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown bg-dark ">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle bg-dark" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color:#ffcc00; ">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right bg-dark border-warning" aria-labelledby="navbarDropdown">
+                            <a class="border-warning dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:#ffcc00">
+                                {{ __('Profile') }}
+                            </a>
+                            @can('manage-users')
+                            <a class="border-warning dropdown-item bg-dark" href="{{ route('allOrders.views') }}" style="color:#ffcc00; ">
+                                All orders
+                             </a>
+                                <a class="border-warning dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:#ffcc00; ">
+                                   User Management
+                                </a>
+                            @endcan
+                            <hr style="border-top: 1px solid #ffcc00;">
+                            <a class="dropdown-item bg-dark" href="{{ route('logout') }}" style="color:#ffcc00"
+                               onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
+        </div>
+    </div>
+</nav>
 
 
   <!-- Header -->
@@ -65,9 +111,9 @@
     </div>
   </header>
 
-  <br><br><br>
+
   <!-- Contact -->
-  <section class="page-section" id="contact">
+  <section class="page-section" style="border-top: 2px solid #ffcc00; border-bottom: 2px solid #ffcc00;" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">

@@ -62,21 +62,24 @@
                             </li>
                         @endif
                     @else
-                        <li class="nav-item dropdown bg-dark">
+                        <li class="nav-item dropdown bg-dark ">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle bg-dark" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color:#ffcc00">
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color:#ffcc00; ">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:#ffcc00">
+                            <div class="dropdown-menu dropdown-menu-right bg-dark border-warning" aria-labelledby="navbarDropdown">
+                                <a class="border-warning dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:#ffcc00">
                                     {{ __('Profile') }}
                                 </a>
                                 @can('manage-users')
-                                    <a class="dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:#ffcc00">
+                                <a class="border-warning dropdown-item bg-dark" href="{{ route('allOrders.views') }}" style="color:#ffcc00; ">
+                                    All orders
+                                 </a>
+                                    <a class="border-warning dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:#ffcc00; ">
                                        User Management
                                     </a>
                                 @endcan
-                                <hr>
+                                <hr style="border-top: 1px solid #ffcc00;">
                                 <a class="dropdown-item bg-dark" href="{{ route('logout') }}" style="color:#ffcc00"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
