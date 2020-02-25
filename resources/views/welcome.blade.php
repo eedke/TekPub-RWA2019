@@ -48,7 +48,10 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="/contact-us" style="color:#ffcc00">Contact Us</a>
 
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="vizija.pdf" style="color:#ffcc00">Vision</a>
 
@@ -112,50 +115,7 @@
   </header>
 
 
-  <!-- Contact -->
-  <section class="page-section" style="border-top: 2px solid #ffcc00; border-bottom: 2px solid #ffcc00;" id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase" style="color:#fed136">Contact Us</h2>
-          <h3 class="section-subheading text-muted"></h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group bg-dark border-warning">
-                  <input class="form-control bg-dark border-warning border-warning" style="color:#a17f1a" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="form-group">
-                  <input class="form-control bg-dark border-warning" style="color:#a17f1a" id="email" type="email" placeholder="Your E-Mail *" required="required" data-validation-required-message="Please enter your email address.">
-                  <p class="help-block text-danger"></p>
-                </div>
-                <div class="form-group">
-                  <input class="form-control bg-dark border-warning" style="color:#a17f1a" id="phone" type="tel" placeholder="Your Number *" required="required" data-validation-required-message="Please enter your phone number.">
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <textarea class="form-control bg-dark border-warning" style="color:#a17f1a" id="message" placeholder="Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-              <div class="col-lg-12 text-center">
-                <div id="success"></div>
-                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" style="color:black" type="submit">Submit Message</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Footer -->
 

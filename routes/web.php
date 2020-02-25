@@ -60,12 +60,8 @@ Route::get('/orderReject/{id}', 'ProductController@getOrderReject');
 
 Route::get('/orderComplete/{id}', 'ProductController@getOrderComplete');
 
-Route::get('/contact', function(){
-    return view('contact');
-});
-
-Route::post('/contact', function (Request $request){
-    Mail::send(new ContactMail($request));
-    return redirect('/');
-});
 Route::get('/AllOrders', 'ProductController@getAllOrders')->name('allOrders.views');
+
+Route::get('contact-us', 'ContactUSController@contactUS');
+
+Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);

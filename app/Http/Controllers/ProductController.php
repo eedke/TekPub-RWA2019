@@ -14,6 +14,7 @@ use Session;
 use Stripe\Charge;
 use Stripe\Token;
 use Stripe\Stripe;
+use Intervention\Image\Facades\Image;
 
 
 class ProductController extends Controller
@@ -42,7 +43,7 @@ class ProductController extends Controller
 
     public function getIndex()
     {
-        $products = Product::all();
+        $products = Product::paginate(15);
         return view('shop.index', ['products' => $products]);
     }
 
