@@ -25,8 +25,8 @@
 
             <form method="post" action="{{ route('contactus.store') }}">
 			    {{ csrf_field() }}
-                <h3>Contact Us</h3>
-               <div class="row">
+                <h3 stylee="text-align:center">Contact Us</h3>
+               <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
                             <input type="text" name="name" class="form-control" placeholder="Your Name *"  required />
@@ -52,21 +52,22 @@
 										</span>
 							 @endif
                         </div>
+                        <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
+                            <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
+                        @if ($errors->has('message'))
+                                <span class="help-block">
+				<strong>{{ $errors->first('message') }}</strong>
+				</span>
+                            @endif
+                        </div>
                         <div class="form-group">
                             <input type="submit" name="btnSubmit" class="btn btn-primary btn-round btn-sm" value="Send Message" />
 
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group {{ $errors->has('message') ? ' has-error' : '' }}">
-                            <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;" required></textarea>
-			     @if ($errors->has('message'))
-				<span class="help-block">
-				<strong>{{ $errors->first('message') }}</strong>
-				</span>
-			    @endif
-                        </div>
-                    </div>
+
+
+
                 </div>
             </form>
 </div>
