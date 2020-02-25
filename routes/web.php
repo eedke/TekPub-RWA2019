@@ -65,3 +65,9 @@ Route::get('/AllOrders', 'ProductController@getAllOrders')->name('allOrders.view
 Route::get('contact-us', 'ContactUSController@contactUS');
 
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactSaveData']);
+
+Route::get('posts', 'HomeController@posts')->name('posts');
+
+Route::post('posts', 'HomeController@postPost')->name('posts.post');
+
+Route::get('posts/{id}', 'HomeController@show')->name('posts.show');

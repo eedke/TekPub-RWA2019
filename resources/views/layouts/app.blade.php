@@ -9,6 +9,9 @@
 
     <title>{{ config('app.name', 'TekPub') }}</title>
 
+
+
+
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}">
     <script src="https://kit.fontawesome.com/9f101af870.js" crossorigin="anonymous"></script>
