@@ -42,10 +42,10 @@ class ContactUSController extends Controller
            'user_message' => $request->get('message')
        ), function($message) use ($request)
    {
-      $message->from('onlineinterviewquestions@gmail.com');
-      $message->to('sharadjaiswal1411@gmail.com', 'Admin')->subject($request->get('subject'));
+      $message->from('tekpub2019@gmail.com');
+      $message->to('tekpub2019@gmail.com', 'Admin')->subject($request->get('subject'));
    });
 
-    return back()->with('success', 'Thanks for contacting us!');
+    return back();
    }
 }

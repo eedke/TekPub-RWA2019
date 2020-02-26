@@ -24,7 +24,7 @@
                         </div>
                     @endif
 
-            <form method="post" action="{{ route('contactus.store') }}">
+            <form method="post" action="{{ route('contactus.store',false) }}">
 			    {{ csrf_field() }}
                 <h3 style="color:#ffcc00;">Contact Us</h3>
                <div class="row justify-content-center">
