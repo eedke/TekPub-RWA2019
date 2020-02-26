@@ -2,8 +2,8 @@
 
 @section('navbar')
     <li class="nav-item">
-        <a href="{{ route('product.index') }}" class="nav-link">
-            <i class="fas fa-book-open" style="color:white"></i>
+        <a href="{{ route('product.index') }}" class="nav-link"  style="color:#ffcc00">
+            <i class="fas fa-book-open "  style="color:#ffcc00"></i>
             Menu
         </a>
     </li>
@@ -11,23 +11,23 @@
     <form action="{{route('product.search') }}" method="POST" role="search">
         {{ csrf_field() }}
         <div class="input-group bg-dark">
-            <input type="text" style="color:white" class="form-control bg-dark" name="q"
+            <input type="text" style="color:#a17f1a" class="form-control bg-dark border-warning" name="q"
                 placeholder="Search... "> <span class="input-group-btn">
                 <button type="submit" class="btn btn-default">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search" style="color:#ffcc00"></i>
                 </button>
             </span>
         </div>
     </form>
 
-    <div class="dropdown show bg-dark">
-        <a class="btn btn-secondary bg-dark btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown show bg-dark" style="padding-top: 2px;">
+        <a class="btn btn-secondary bg-dark border-warning btn-sm dropdown-toggle" style="color:#ffcc00" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Categories
         </a>
 
         <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:white">Food</a>
-            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:white">Drinks</a>
+            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Food') }}" style="color:#ffcc00">Food</a>
+            <a class="dropdown-item bg-dark" href="{{route('productCategory.search', $val = 'Drinks') }}" style="color:#ffcc00">Drinks</a>
         </div>
     </div>
 @endsection

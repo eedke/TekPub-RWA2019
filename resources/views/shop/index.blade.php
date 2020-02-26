@@ -13,7 +13,7 @@
     </div>
 </form>
 
-<div class="dropdown show bg-dark">
+<div class="dropdown show bg-dark" style="padding-top: 2px;">
     <a class="btn btn-secondary bg-dark border-warning btn-sm dropdown-toggle" style="color:#ffcc00" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Categories
     </a>
@@ -62,10 +62,9 @@
                         {{ $products->links()}}
                     </div>
                 </div>
+
+
         </div>
     </div>
 
 @endsection
-
-
-
