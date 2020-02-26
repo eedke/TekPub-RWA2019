@@ -5,8 +5,9 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
-<body>
+<body class="bg-dark">
 
 
 <!------ Include the above in your HEAD tag ---------->
@@ -25,7 +26,7 @@
 
             <form method="post" action="{{ route('contactus.store') }}">
 			    {{ csrf_field() }}
-                <h3 stylee="text-align:center">Contact Us</h3>
+                <h3 style="color:#ffcc00;">Contact Us</h3>
                <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
@@ -61,7 +62,7 @@
                             @endif
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="btnSubmit" class="btn btn-primary btn-round btn-sm" value="Send Message" />
+                            <input type="submit" name="btnSubmit" class="btn btn-warning" value="Send Message" />
 
                         </div>
                     </div>
