@@ -239,6 +239,13 @@
       <workItem from="1582818098435" duration="1329000" />
       <workItem from="1582819459689" duration="1779000" />
       <workItem from="1582821276476" duration="1545000" />
+      <workItem from="1582825582473" duration="1781000" />
+      <workItem from="1582827432428" duration="1777000" />
+      <workItem from="1582829294637" duration="1776000" />
+      <workItem from="1582831106004" duration="1776000" />
+      <workItem from="1582832914843" duration="1788000" />
+      <workItem from="1582834739741" duration="1785000" />
+      <workItem from="1582836562528" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="Detalji">
       <created>1580255824916</created>
@@ -275,10 +282,10 @@
     </state>
     <state x="197" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580255821909" />
     <state x="222" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1581361746997" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1581780672621">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1582831244319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581780672621" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1582831244319" />
     <state x="521" y="134" key="FileChooserDialogImpl" timestamp="1582821429168">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -310,7 +317,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/web.php</url>
-          <line>60</line>
+          <line>64</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

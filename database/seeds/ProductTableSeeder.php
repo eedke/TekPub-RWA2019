@@ -124,7 +124,7 @@ class ProductTableSeeder extends Seeder
         $product = new \App\Product([
             'imagePath' => 'https://i.ibb.co/Yd5tdf9/oie-ng-Qsf-Emi-Or-Px.jpg',
             'title' => 'Latte Macchiato',
-            'description' => 'Coffee',
+            'description' => 'Coffee beverage; the name means stained or marked milk',
             'price' => 4,
             'amount' => 9999,
             'type' => 'Drinks',
@@ -182,40 +182,10 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->save();
         $product = new \App\Product([
-            'imagePath' => 'https://i.ibb.co/4K8bYm7/imgonline-com-ua-Piconpic-7xo-QTp7awf-Osb-N6.jpg',
-            'title' => 'Pozoj, Zmajska Pivovara',
-            'description' => 'Pozoj! Hmeljna bomba!',
+            'imagePath' => 'https://i.ibb.co/gZj4NLW/Image-URL.jpg',
+            'title' => 'Zmajska Pivovara',
+            'description' => 'Pale Ale, Pils, Hoppy Wheat, Pozoj',
             'price' => 3.5,
-            'amount' => 9999,
-            'type' => 'Drinks',
-            'subtype' => 'Beer'
-        ]);
-        $product->save();
-        $product = new \App\Product([
-            'imagePath' => 'https://i.ibb.co/C6GfjYC/imgonline-com-ua-Piconpic-Hv-Akvr-Mz-NZBB-1.jpg',
-            'title' => 'Pils, Zmajska Pivovara',
-            'description' => 'Robusno je, nije šala!',
-            'price' => 3.5,
-            'amount' => 9999,
-            'type' => 'Drinks',
-            'subtype' => 'Beer'
-        ]);
-        $product->save();
-        $product = new \App\Product([
-            'imagePath' => 'https://i.ibb.co/kq7dPS9/imgonline-com-ua-Piconpic-S1-WZhdw-KYr0nl.jpg',
-            'title' => 'Pale Ale, Zmajska Pivovara',
-            'description' => 'Realno, pitko je do bola!',
-            'price' => 3.5,
-            'amount' => 9999,
-            'type' => 'Drinks',
-            'subtype' => 'Beer'
-        ]);
-        $product->save();
-        $product = new \App\Product([
-            'imagePath' => 'https://i.ibb.co/RBZZNsM/imgonline-com-ua-Piconpic-jb-Wy-Np-DSkbb-MC3-X-2.jpg',
-            'title' => 'Hoppy Wheat, Zmajska Pivovara',
-            'description' => 'Lagano se pije, a teško zaboravlja!',
-            'price' => 4,
             'amount' => 9999,
             'type' => 'Drinks',
             'subtype' => 'Beer'
@@ -244,7 +214,7 @@ class ProductTableSeeder extends Seeder
         $product = new \App\Product([
             'imagePath' => 'https://i.ibb.co/c6Xjt60/oie-Bho-LF9-ZXx2-FO.jpg',
             'title' => 'Southern Comfort Black',
-            'description' => 'A robust whiskey-forward profile with subtle spice and fruity accents, our Black label takes the original Southern Comfort experience up a notch',
+            'description' => 'A robust whiskey-forward profile with subtle spice and fruity accents.',
             'price' => 6,
             'amount' => 9999,
             'type' => 'Drinks',
@@ -253,8 +223,8 @@ class ProductTableSeeder extends Seeder
         $product->save();
         $product = new \App\Product([
             'imagePath' => 'https://i.ibb.co/P4Q0K1q/oie-BAWg-FPGb-Yn51.jpg',
-            'title' => 'Southern Comfort Original',
-            'description' => 'Southern Comfort Original is inspired by our founder’s 1874 recipe, with core whiskey notes and iconic fruit and spice accents.',
+            'title' => 'Southern Comfort Og',
+            'description' => 'Southern Comfort Original is inspired by the founder’s 1874 recipe, with iconic fruit and spice accents.',
             'price' => 5.5,
             'amount' => 9999,
             'type' => 'Drinks',
@@ -274,7 +244,7 @@ class ProductTableSeeder extends Seeder
         $product = new \App\Product([
             'imagePath' => 'https://i.ibb.co/SJkF9qf/oie-8-BUje-X3h-Bv0-O.jpg',
             'title' => 'Pizza',
-            'description' => 'A dish made typically of flattened bread dough spread with a savory mixture usually including tomatoes and cheese and often other toppings and baked',
+            'description' => 'A dish made typically of flattened bread dough spread with a savory mixture usually including tomatoes and cheese.',
             'price' => 9,
             'amount' => 9999,
             'type' => 'Food',

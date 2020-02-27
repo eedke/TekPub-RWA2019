@@ -49,7 +49,7 @@
                             <i class="fa fa-shopping-cart" style="color:#ffcc00" aria-hidden="true"></i>
                             Shopping Cart
                             <span
-                                class="badge badge-secondary">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
+                                class="badge badge-warning">{{ Session::has('cart') ? Session::get('cart')->totalQty : '' }}</span>
                         </a>
                     </li>
                     <!-- Authentication Links -->

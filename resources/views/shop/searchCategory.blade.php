@@ -41,12 +41,12 @@
                             <div class="card bg-dark border-warning mb-3" style="height:31rem">
                                 <img class="card-img-top" src="{{$product->imagePath}}" alt="{{$product->title}}">
                                 <div class="card-body">
-                                    <h3 class="card-title text-white">{{ $product->title }}</h3>
-                                    <p class="card-text"><span style="color:#dcdcdc; ">{{$product->description}}</span>
+                                    <h3 class="card-title text-warning">{{ $product->title }}</h3>
+                                    <p class="card-text"><span style="color:darkorange; ">{{$product->description}}</span>
                                     </p>
                                     <div class="card-footer bg-transparent border-warning"
                                          style=" position:absolute; bottom:0px; left:0; width:100%; height:60px;">
-                                        <h5 class="float-left text-white"><span>{{$product->price}}KM</span></h5>
+                                        <h5 class="float-left" style="color:darkorange"><span>{{$product->price}}KM</span></h5>
                                         <a href="{{ route('product.addToCart', ['id' => $product->id]) }}"
                                            class="btn float-right btn-warning">Add to Cart</a>
                                     </div>

@@ -4,12 +4,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card bg-dark">
-                    <div class="card-header" style="color:#DCDCDC">Dashboard</div>
+                <div class="card bg-dark border-warning">
+                    <h5 class="card-header border-warning" style="color:#ffcc00">Dashboard</h5>
 
-                    <div class="card-body bg-dark" style="color:#DCDCDC">
+                    <div class="card-body bg-dark" style="color:#ffcc00">
                         @if (session('status'))
-                            <div class="alert alert-success" role="alert" style="color:#DCDCDC">
+                            <div class="alert alert-success" role="alert" style="color:#ffcc00">
                                 {{ session('status') }}
                             </div>
                         @endif

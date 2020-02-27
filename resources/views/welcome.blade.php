@@ -120,8 +120,8 @@
 <header class="masthead">
     <div class="container">
         <div class="intro-text">
-            <div class="intro-heading text-warning" style="text-shadow: 6px 6px 0px rgba(0,0,0,0.8);">TekPub</div>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="color:black"
+            <div class="intro-heading text-warning" style="text-shadow: 6px 6px 0px #212529;">TekPub</div>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" style="color:#212529"
                href="{{ route('product.index') }}">Order Now!</a>
             <div class="intro-lead-in"><br></div>
         </div>
@@ -131,27 +131,27 @@
 
 <!-- Footer -->
 
-<footer class="footer">
+<footer class="footer" style="border-top: 2px solid #ffcc00">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-4">
-                <span class="copyright text-warning">Copyright &copy; TekPub 2019</span>
+                <span class="copyright" style="color:#ffcc00">Copyright &copy; TekPub 2019</span>
             </div>
             <div class="col-md-4">
                 <ul class="list-inline social-buttons">
                     <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-twitter" style="color:#ffcc00"></i>
+                        <a href="https://twitter.com">
+                            <i class="fab fa-twitter"></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-facebook-f" style="color:#ffcc00"></i>
+                        <a href="https://facebook.com">
+                            <i class="fab fa-facebook-f" ></i>
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-linkedin-in" style="color:#ffcc00"></i>
+                        <a href="https://github.com/eedke/TekPub-RWA2019">
+                            <i class="fab fa-github"></i>
                         </a>
                     </li>
                 </ul>

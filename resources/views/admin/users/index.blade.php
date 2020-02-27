@@ -4,29 +4,29 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header bg-dark" style="color:white">Users</div>
+                <div class="card border-warning">
+                    <h4 class="card-header bg-dark border-warning" style="color:#ffcc00">Users</h4>
 
                     <div class="card-body bg-dark">
                         <table class="table">
-                            <thead>
+                            <thead style="border-top: 2px solid #ffcc00; border-bottom: 2.4px solid #ffcc00">
                             <tr>
-                                <th scope="col" style="color:white">#</th>
-                                <th scope="col" style="color:white">Name</th>
-                                <th scope="col" style="color:white">Email</th>
-                                <th scope="col" style="color:white">Roles</th>
-                                <th scope="col" style="color:white">Actions</th>
+                                <th scope="col" style="color:orange">#</th>
+                                <th scope="col" style="color:orange">Name</th>
+                                <th scope="col" style="color:orange">Email</th>
+                                <th scope="col" style="color:orange">Roles</th>
+                                <th scope="col" style="color:orange">Actions</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($users as $user)
-                                <tr>
-                                    <th scope="row" style="color:#dcdcdc">{{ $user->id }}</th>
+                                <tr style="border-top: 2px solid #ffcc00; border-bottom: 2px solid #ffcc00">
+                                    <th scope="row" style="color:orange">{{ $user->id }}</th>
                                     @can('view-users')
-                                        <td><a href="{{ url('user/view/'.$user->id) }}">{{ $user->name }}</a></td>
+                                        <td><a style="font-weight:bold" class="text-warning" href="{{ url('user/view/'.$user->id) }}">{{ $user->name }}</a></td>
                                     @endcan
-                                    <td style="color:#dcdcdc">{{ $user->email }}</td>
-                                    <td style="color:#dcdcdc">{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</td>
+                                    <td style="color:orange">{{ $user->email }}</td>
+                                    <td style="color:orange">{{ implode(', ', $user->roles()->get()->pluck('name')->toArray()) }}</td>
                                     <td>
                                         @can('edit-users')
                                             <a href="{{ route('admin.users.edit', $user->id) }}">

@@ -225,4 +225,21 @@ class ProductController extends Controller
         $products = $products->reverse();
         return view('shop.index')->with('products', $products);
     }
+    public function getSortNameAsc()
+    {
+        $products = Product::all();
+
+        $products = $products->sortBy('title', SORT_ASC);
+
+        return view('shop.index')->with('products', $products);
+    }
+
+    public function getSortNameDesc()
+    {
+        $products = Product::all();
+
+        $products = $products->sortBy('title', SORT_ASC);
+        $products = $products->reverse();
+        return view('shop.index')->with('products', $products);
+    }
 }

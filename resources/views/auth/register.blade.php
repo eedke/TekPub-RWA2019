@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card bg-dark">
-                    <div class="card-header bg-dark" style="color:white"><strong>{{ __('Register') }}</strong></div>
+                <div class="card bg-dark border-warning">
+                    <h5 class="card-header border-warning bg-dark" style="color:#ffcc00"><strong>{{ __('Register') }}</strong></h5>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}">
@@ -13,13 +13,13 @@
 
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right"
-                                       style="color:#dcdcdc">{{ __('Name') }}</label>
+                                       style="color:#ffcc00">{{ __('Name') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="name" type="text"
-                                           class="form-control bg-dark @error('name') is-invalid @enderror" name="name"
+                                           class="form-control bg-dark border-warning @error('name') is-invalid @enderror" name="name"
                                            value="{{ old('name') }}" required autocomplete="name" autofocus
-                                           style="color:#a6a6a6">
+                                           style="color:#ffcc00">
 
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -31,13 +31,13 @@
 
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right"
-                                       style="color:#dcdcdc">{{ __('E-Mail Address') }}</label>
+                                       style="color:#ffcc00">{{ __('E-Mail Address') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email"
-                                           class="form-control bg-dark @error('email') is-invalid @enderror"
+                                           class="form-control bg-dark border-warning @error('email') is-invalid @enderror"
                                            name="email" value="{{ old('email') }}" required autocomplete="email"
-                                           style="color:#a6a6a6">
+                                           style="color:#ffcc00">
 
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -49,12 +49,12 @@
 
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right"
-                                       style="color:#dcdcdc">{{ __('Password') }}</label>
+                                       style="color:#ffcc00">{{ __('Password') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password"
-                                           class="form-control bg-dark @error('password') is-invalid @enderror"
-                                           name="password" required autocomplete="new-password" style="color:#a6a6a6">
+                                           class="form-control bg-dark border-warning @error('password') is-invalid @enderror"
+                                           name="password" required autocomplete="new-password" style="color:#ffcc00">
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -66,18 +66,18 @@
 
                             <div class="form-group row">
                                 <label for="password-confirm" class="col-md-4 col-form-label text-md-right"
-                                       style="color:#dcdcdc">{{ __('Confirm Password') }}</label>
+                                       style="color:#ffcc00">{{ __('Confirm Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control bg-dark"
+                                    <input id="password-confirm" type="password" class="form-control bg-dark border-warning"
                                            name="password_confirmation" required autocomplete="new-password"
-                                           style="color:#a6a6a6">
+                                           style="color:#ffcc00">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-warning">
                                         {{ __('Register') }}
                                     </button>
                                 </div>

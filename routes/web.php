@@ -38,9 +38,13 @@ Route::get('/checkout', 'ProductController@getCheckout')->name('checkout')->midd
 
 Route::post('/search', 'ProductController@getSearch')->name('product.search');
 
-Route::get('/sortAsc', 'ProductController@getSortAsc')->name('product.sortAsc');
+Route::get('/sortPriceAsc', 'ProductController@getSortAsc')->name('product.sortAsc');
 
-Route::get('/sortDesc', 'ProductController@getSortDesc')->name('product.sortDesc');
+Route::get('/sortPriceDesc', 'ProductController@getSortDesc')->name('product.sortDesc');
+
+Route::get('/sortNameAsc', 'ProductController@getSortNameAsc')->name('product.sortNameAsc');
+
+Route::get('/sortNameDesc', 'ProductController@getSortNameDesc')->name('product.sortNameDesc');
 
 Route::get('/search/{id}', 'ProductController@getSearchCategory')->name('productCategory.search');
 

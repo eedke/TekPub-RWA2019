@@ -4,19 +4,19 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="card bg-dark border-white">
-                    <div class="card-header border-white" style="color:white"><strong>{{ __('Login') }}</strong></div>
+                <div class="card bg-dark border-warning">
+                    <h5 class="card-header border-warning" style="color:#ffcc00"><strong>{{ __('Login') }}</strong></h5>
 
-                    <div class="card-body border-white">
+                    <div class="card-body border-warning">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right"
-                                       style="color:#dcdcdc">{{ __('E-Mail Address') }}</label>
+                                       style="color:#ffcc00">{{ __('E-Mail Address') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" style="color:#a6a6a6" type="email"
+                                    <input id="email" style="color:#ffcc00" type="email"
                                            class="form-control bg-dark @error('email') is-invalid @enderror"
                                            name="email" value="{{ old('email') }}" required autocomplete="email"
                                            autofocus>
@@ -31,10 +31,10 @@
 
                             <div class="form-group row">
                                 <label for="password" class="col-md-4 col-form-label text-md-right"
-                                       style="color:#dcdcdc">{{ __('Password') }}</label>
+                                       style="color:#ffcc00">{{ __('Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" style="color:#a6a6a6"
+                                    <input id="password" type="password" style="color:#ffcc00"
                                            class="form-control bg-dark @error('password') is-invalid @enderror"
                                            name="password" required autocomplete="current-password">
 
@@ -52,7 +52,7 @@
                                         <input class="form-check-input" type="checkbox" name="remember"
                                                id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                        <label class="form-check-label" for="remember" style="color:#dcdcdc">
+                                        <label class="form-check-label" for="remember" style="color:#ffcc00">
                                             {{ __('Remember Me') }}
                                         </label>
                                     </div>
@@ -61,12 +61,12 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-warning">
                                         {{ __('Login') }}
                                     </button>
 
                                     @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        <a class="btn btn-link" style="color:darkorange" href="{{ route('password.request') }}">
                                             {{ __('Forgot Your Password?') }}
                                         </a>
                                     @endif
