@@ -39,5 +39,7 @@ class UserController extends Controller
             'orders' => $orders
         ]);
     }
-
+    public function getAboutUs(){
+        return view('about-us');
+    }
 }

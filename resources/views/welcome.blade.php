@@ -57,6 +57,11 @@
             </li>
             -->
             <li class="nav-item">
+                <a class="nav-link" target="_blank" href="{{route('about-us')}}" style="color:#ffcc00">About Us</a>
+
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link" target="_blank" href="vizija.pdf" style="color:#ffcc00">Vision</a>
 
             </li>

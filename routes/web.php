@@ -75,3 +75,5 @@ Route::post('posts', 'HomeController@postPost')->name('posts.post');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('posts/{id}', 'HomeController@show')->name('posts.show');
+
+Route::get('/about-us', 'UserController@getAboutUs')->name('about-us');

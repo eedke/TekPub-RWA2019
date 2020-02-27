@@ -82,18 +82,16 @@
             <nav>
                 <ul class="pagination">
 
-                    <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Previous">
-                        <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                    <li class="page-item">
+                        <a style="background-color:#343a40; color: #ffcc00; border: 1px solid #ffcc00; transition: background-color .3s; padding: 8px 16px;" class="page-link" href="?page=1" rel="next" aria-label="Next">&laquo;</a>
                     </li>
 
-
-                    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
-                    <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
-                    <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
-
+                    <li class="page-item"><a style="background-color:#343a40; color: #ffcc00; border: 1px solid #ffcc00; transition: background-color .3s; padding: 8px 16px;" class="page-link" href="?page=1">1</a></li>
+                    <li class="page-item"><a style="background-color:#343a40; color: #ffcc00; border: 1px solid #ffcc00; transition: background-color .3s; padding: 8px 16px;" class="page-link" href="?page=2">2</a></li>
+                    <li class="page-item"><a style="background-color:#343a40; color: #ffcc00; border: 1px solid #ffcc00; transition: background-color .3s; padding: 8px 16px;" class="page-link" href="?page=3">3</a></li>
 
                     <li class="page-item">
-                        <a class="page-link" href="?page=2" rel="next" aria-label="Next &raquo;">&rsaquo;</a>
+                        <a style="background-color:#343a40; color: #ffcc00; border: 1px solid #ffcc00; transition: background-color .3s; padding: 8px 16px;" class="page-link" href="?page=2" rel="next" aria-label="Next">&raquo;</a>
                     </li>
                 </ul>
             </nav>

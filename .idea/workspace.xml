@@ -149,6 +149,7 @@
       <path value="$PROJECT_DIR$/vendor/league/commonmark" />
       <path value="$PROJECT_DIR$/vendor/stripe/stripe-php" />
       <path value="$PROJECT_DIR$/vendor/laravelcollective/html" />
+      <path value="$PROJECT_DIR$/vendor/willvincent/laravel-rateable" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UoA23fS0bzthKjuDDLf4JvVh1L" />
@@ -161,12 +162,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TekPubOld" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TekPub" />
       <recent name="C:\Users\edokr\Desktop\TekPub" />
       <recent name="C:\Users\edokr\Desktop\Vebsajt\resources\views" />
     </key>
@@ -234,6 +236,9 @@
       <workItem from="1582629797166" duration="511000" />
       <workItem from="1582804524410" duration="705000" />
       <workItem from="1582809900676" duration="4307000" />
+      <workItem from="1582818098435" duration="1329000" />
+      <workItem from="1582819459689" duration="1779000" />
+      <workItem from="1582821276476" duration="1545000" />
     </task>
     <task id="LOCAL-00001" summary="Detalji">
       <created>1580255824916</created>
@@ -274,11 +279,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1581780672621" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1582047643993">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="521" y="134" key="FileChooserDialogImpl" timestamp="1582821429168">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582047643993" />
-    <state x="521" y="134" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581528211757" />
+    <state x="521" y="134" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582821429168" />
     <state x="518" y="288" key="NewPhpFileDialog" timestamp="1581966296051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -299,5 +304,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1580254919000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/web.php</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

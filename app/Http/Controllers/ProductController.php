@@ -221,8 +221,8 @@ class ProductController extends Controller
     {
         $products = Product::all();
 
-        $products = $products->sortBy('price', SORT_DESC);
-
+        $products = $products->sortBy('price', SORT_ASC);
+        $products = $products->reverse();
         return view('shop.index')->with('products', $products);
     }
 }
