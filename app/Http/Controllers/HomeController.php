@@ -26,14 +26,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
     public function posts()
 
     {
         $posts = Post::all();
 
-        return view('posts',compact('posts'));
+        return view('posts', compact('posts'));
     }
-
 
 
     public function show($id)
@@ -42,10 +42,9 @@ class HomeController extends Controller
 
         $post = Post::find($id);
 
-        return view('postsShow',compact('post'));
+        return view('postsShow', compact('post'));
 
     }
-
 
 
     public function postPost(Request $request)
@@ -57,7 +56,6 @@ class HomeController extends Controller
         $post = Post::find($request->id);
 
 
-
         $rating = new \willvincent\Rateable\Rating;
 
         $rating->rating = $request->rate;
@@ -65,9 +63,7 @@ class HomeController extends Controller
         $rating->user_id = auth()->user()->id;
 
 
-
         $post->ratings()->save($rating);
-
 
 
         return redirect()->route("posts");

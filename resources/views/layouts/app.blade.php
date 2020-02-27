@@ -10,8 +10,6 @@
     <title>{{ config('app.name', 'TekPub') }}</title>
 
 
-
-
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}">
     <script src="https://kit.fontawesome.com/9f101af870.js" crossorigin="anonymous"></script>
@@ -26,7 +24,7 @@
 </head>
 <body style="background-color:#353942">
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm" style="border-bottom: 3px solid #ffcc00;">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top" style="border-bottom: 3px solid #ffcc00;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="https://i.ibb.co/GCf1kKs/logo.png" height="35px" alt="TekPub">
@@ -61,25 +59,31 @@
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}" style="color:#ffcc00">{{ __('Register') }}</a>
+                                <a class="nav-link" href="{{ route('register') }}"
+                                   style="color:#ffcc00">{{ __('Register') }}</a>
                             </li>
                         @endif
                     @else
                         <li class="nav-item dropdown bg-dark ">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle bg-dark" href="#" role="button"
-                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre style="color:#ffcc00; ">
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre
+                               style="color:#ffcc00; ">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right bg-dark border-warning" aria-labelledby="navbarDropdown">
-                                <a class="border-warning dropdown-item bg-dark" href="{{ route('user.profile') }}" style="color:#ffcc00">
+                            <div class="dropdown-menu dropdown-menu-right bg-dark border-warning"
+                                 aria-labelledby="navbarDropdown">
+                                <a class="border-warning dropdown-item bg-dark" href="{{ route('user.profile') }}"
+                                   style="color:#ffcc00">
                                     {{ __('Profile') }}
                                 </a>
                                 @can('manage-users')
-                                <a class="border-warning dropdown-item bg-dark" href="{{ route('allOrders.views') }}" style="color:#ffcc00; ">
-                                    All orders
-                                 </a>
-                                    <a class="border-warning dropdown-item bg-dark" href="{{ route('admin.users.index') }}" style="color:#ffcc00; ">
-                                       User Management
+                                    <a class="border-warning dropdown-item bg-dark" href="{{ route('allOrders.view') }}"
+                                       style="color:#ffcc00; ">
+                                        All orders
+                                    </a>
+                                    <a class="border-warning dropdown-item bg-dark"
+                                       href="{{ route('admin.users.index') }}" style="color:#ffcc00; ">
+                                        User Management
                                     </a>
                                 @endcan
                                 <hr style="border-top: 1px solid #ffcc00;">
@@ -89,7 +93,8 @@
                                     {{ __('Logout') }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
                                     @csrf
                                 </form>
                             </div>
@@ -100,7 +105,7 @@
         </div>
     </nav>
 
-    <main class="py-4">
+    <main class="py-4 mt-5">
         @yield('content')
     </main>
 </div>

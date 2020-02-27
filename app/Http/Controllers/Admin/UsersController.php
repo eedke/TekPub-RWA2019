@@ -31,13 +31,13 @@ class UsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\User  $user
+     * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
 
     public function edit(User $user)
     {
-        if(Gate::denies('edit-users')){
+        if (Gate::denies('edit-users')) {
             return redirect(route('admin.users.index'));
         }
         $roles = Role::all();
@@ -47,13 +47,13 @@ class UsersController extends Controller
             'roles' => $roles
         ]);
     }
-     
+
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
+     * @param \Illuminate\Http\Request $request
+     * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
@@ -70,12 +70,12 @@ class UsersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\User  $user
+     * @param \App\User $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
     {
-        if(Gate::denies('delete-users')){
+        if (Gate::denies('delete-users')) {
             return redirect(route('admin.users.index'));
         }
 

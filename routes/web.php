@@ -20,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
 Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product.addToCart');
 
 Route::get('/reduce/{id}', 'ProductController@getReduceByOne')->name('product.reduceByOne');
@@ -34,23 +36,11 @@ Route::get('/shopping-cart', 'ProductController@getCart')->name('product.shoppin
 
 Route::get('/checkout', 'ProductController@getCheckout')->name('checkout')->middleware('auth');
 
-Route::post('/checkout', 'ProductController@postCheckout')->name('checkout');
-
-Route::get('/user/profile', 'UserController@getProfile')->name('user.profile')->middleware('auth');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/menu', 'ProductController@getIndex')->name('product.index');
-
-Route::get('user/view/{id}', 'UserController@getView');
-
-Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
-    Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
-});
-
 Route::post('/search', 'ProductController@getSearch')->name('product.search');
+
+Route::get('/sortAsc', 'ProductController@getSortAsc')->name('product.sortAsc');
+
+Route::get('/sortDesc', 'ProductController@getSortDesc')->name('product.sortDesc');
 
 Route::get('/search/{id}', 'ProductController@getSearchCategory')->name('productCategory.search');
 
@@ -60,7 +50,19 @@ Route::get('/orderReject/{id}', 'ProductController@getOrderReject');
 
 Route::get('/orderComplete/{id}', 'ProductController@getOrderComplete');
 
-Route::get('/AllOrders', 'ProductController@getAllOrders')->name('allOrders.views');
+Route::get('/AllOrders', 'ProductController@getAllOrders')->name('allOrders.view');
+
+Route::post('/checkout', 'ProductController@postCheckout')->name('checkout');
+
+Route::get('/menu', 'ProductController@getIndex')->name('product.index');
+
+Route::get('/user/profile', 'UserController@getProfile')->name('user.profile')->middleware('auth');
+
+Route::get('user/view/{id}', 'UserController@getView');
+
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
+});
 
 Route::get('contact-us', 'ContactUSController@contactUS');
 
@@ -69,5 +71,7 @@ Route::post('contact-us', 'ContactUSController@contactSaveData')->name('contactu
 Route::get('posts', 'HomeController@posts')->name('posts');
 
 Route::post('posts', 'HomeController@postPost')->name('posts.post');
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('posts/{id}', 'HomeController@show')->name('posts.show');

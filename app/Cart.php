@@ -43,6 +43,7 @@ class Cart
             unset($this->items[$id]);
         }
     }
+
     public function increaseByOne($id)
     {
         $this->items[$id]['qty']++;

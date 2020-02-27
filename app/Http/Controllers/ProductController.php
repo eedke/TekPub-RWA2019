@@ -5,40 +5,38 @@ namespace App\Http\Controllers;
 use App\Cart;
 use App\Product;
 use App\Order;
-use App\User;
 use Auth;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Session;
-use Stripe\Charge;
-use Stripe\Token;
-use Stripe\Stripe;
 use Intervention\Image\Facades\Image;
 
 
 class ProductController extends Controller
 {
-    public function getSearch(){
-        $q = \Request::get ( 'q' );
-        $product = Product::where ( 'title', 'LIKE', '%' . $q . '%' )->orWhere ( 'description', 'LIKE', '%' . $q . '%' )->orWhere ( 'subtype', 'LIKE', '%' . $q . '%' )->get ();
-        if (count ( $product ) > 0)
-            return view ( 'shop.search' )->withDetails ( $product )->withQuery ( $q );
+    public function getSearch()
+    {
+        $q = \Request::get('q');
+        $product = Product::where('title', 'LIKE', '%' . $q . '%')->orWhere('description', 'LIKE', '%' . $q . '%')->orWhere('subtype', 'LIKE', '%' . $q . '%')->get();
+        if (count($product) > 0)
+            return view('shop.search')->withDetails($product)->withQuery($q);
         else
-            return view ( 'shop.search' )->withMessage ( 'No Details found. Try to search again !' );
+            return view('shop.search')->withMessage('No Details found. Try to search again !');
 
     }
 
- public function getSearchCategory($val){
+    public function getSearchCategory($val)
+    {
 
 
-    $product = Product::where ( 'type', 'LIKE', '%' . $val . '%' )->get ();
-    if (count ( $product ) > 0)
-        return view ( 'shop.searchCategory' )->withDetails ( $product )->withQuery ( $val );
-    else
-        return view ( 'shop.searchCategory' )->withMessage ( 'No Details found. Try to search again !' );
+        $product = Product::where('type', 'LIKE', '%' . $val . '%')->get();
+        if (count($product) > 0)
+            return view('shop.searchCategory')->withDetails($product)->withQuery($val);
+        else
+            return view('shop.searchCategory')->withMessage('No Details found. Try to search again !');
 
- }
+    }
 
 
     public function getIndex()
@@ -72,15 +70,14 @@ class ProductController extends Controller
 
         return redirect()->route('product.shoppingCart');
     }
+
     public function getIncreaseByOne($id)
     {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
         $cart->increaseByOne($id);
 
-
         Session::put('cart', $cart);
-
 
         return redirect()->route('product.shoppingCart');
     }
@@ -99,7 +96,9 @@ class ProductController extends Controller
 
         return redirect()->route('product.shoppingCart');
     }
-    public function getRemoveAll(){
+
+    public function getRemoveAll()
+    {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
         Session::forget('cart');
@@ -144,6 +143,7 @@ class ProductController extends Controller
         try {
             $session = \Stripe\Checkout\Session::create([
                 'payment_method_types' => ['card'],
+
                 'line_items' => [[
                     'name' => ' A test purchase',
                     'description' => 'using stripe',
@@ -169,37 +169,60 @@ class ProductController extends Controller
         }
 
 
-
         Session::forget('cart');
         return redirect()->route('product.index')->with('success', 'Successfully purchased products!');
     }
-    public function getOrderAccept($id){
+
+    public function getOrderAccept($id)
+    {
         $order = Order::find($id);
         $order->status = 1;
         $order->save();
         return back();
     }
 
-    public function getOrderComplete($id){
+    public function getOrderComplete($id)
+    {
         $order = Order::find($id);
         $order->status = 2;
         $order->save();
         return back();
     }
 
-    public function getOrderReject($id){
+    public function getOrderReject($id)
+    {
         $order = Order::find($id);
         $order->status = 3;
         $order->save();
         return back();
     }
-    public function getAllOrders(){
+
+    public function getAllOrders()
+    {
         $orders = Order::all();
         $orders->transform(function ($order, $key) {
             $order->cart = unserialize($order->cart);
             return $order;
         });
         $orders = $orders->reverse();
-        return view('admin.users.views')->with('orders', $orders);
+        return view('admin.users.allOrders')->with('orders', $orders);
+    }
+
+    public function getSortAsc()
+    {
+        $products = Product::all();
+
+        $products = $products->sortBy('price', SORT_ASC);
+
+        return view('shop.index')->with('products', $products);
+    }
+
+    public function getSortDesc()
+    {
+        $products = Product::all();
+
+        $products = $products->sortBy('price', SORT_DESC);
+
+        return view('shop.index')->with('products', $products);
     }
 }

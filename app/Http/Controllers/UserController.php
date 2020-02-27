@@ -17,12 +17,13 @@ class UserController extends Controller
             $order->cart = unserialize($order->cart);
             return $order;
         });
-        return view('user.profile', ['orders' => $orders]);
+        $orders = $orders->reverse();
+        return view('user.profile', ['orders' => $orders, 'user' => Auth::user()]);
     }
 
     public function getView($id)
     {
-        if(Gate::denies('view-users')){
+        if (Gate::denies('view-users')) {
             return redirect(route('admin.users.index'));
         }
         $user = User::find($id);

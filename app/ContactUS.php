@@ -1,16 +1,16 @@
 <?php
 
-	namespace App;
+namespace App;
 
-	use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
-	class ContactUS extends Model
-	{
+class ContactUS extends Model
+{
 
-	public $table = 'contactus';
+    public $table = 'contactus';
 
-	public $fillable = ['name','email','subject','message'];
+    public $fillable = ['name', 'email', 'subject', 'message'];
 
-	}
+}
 
 

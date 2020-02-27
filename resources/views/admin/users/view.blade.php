@@ -12,7 +12,8 @@
                             <ul class="list-group ">
                                 @foreach($order->cart->items as $item)
                                     <li class="list-group-item border-warning bg-dark" style="color:#dcdcdc">
-                                        <span class="badge float-right" style="color:orange">{{ $item['price'] }} KM</span>
+                                        <span class="badge float-right"
+                                              style="color:orange">{{ $item['price'] }} KM</span>
                                         <span style="color:orange">{{ $item['item']['title'] }} | {{ $item['qty'] }} Units.</span>
                                     </li>
                                 @endforeach
@@ -23,12 +24,15 @@
 
                             <strong style="color:#ffcc00" class="float-right">Order status:
                                 @if ($order->status == 0)
-                                   <span class="text-warning">waiting</span>
-                                    <a href="{{url('orderAccept/'.$order->id) }}"><i style="color:#ffcc00" class="fas fa-check-square"></i></a>
-                                    <a href="{{url('orderReject/'.$order->id) }}"><i style="color:#ffcc00" class="fas fa-window-close"></i></a>
+                                    <span class="text-warning">waiting</span>
+                                    <a href="{{url('orderAccept/'.$order->id) }}"><i style="color:#ffcc00"
+                                                                                     class="fas fa-check-square"></i></a>
+                                    <a href="{{url('orderReject/'.$order->id) }}"><i style="color:#ffcc00"
+                                                                                     class="fas fa-window-close"></i></a>
                                 @elseif($order->status==1)
                                     <span class="text-info">accepted</span>
-                                    <a href="{{url('orderComplete/'.$order->id) }}"><i style="color:#ffcc00" class="fas fa-vote-yea"></i></a>
+                                    <a href="{{url('orderComplete/'.$order->id) }}"><i style="color:#ffcc00"
+                                                                                       class="fas fa-vote-yea"></i></a>
                                 @elseif($order->status==2)
                                     <span class="text-success">complete</span>
                                 @else
