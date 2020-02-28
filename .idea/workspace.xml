@@ -162,12 +162,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TekPubOld" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\TekPub\app" />
+      <recent name="D:\TekPub\resources\views" />
       <recent name="D:\TekPub" />
       <recent name="C:\Users\edokr\Desktop\TekPub" />
       <recent name="C:\Users\edokr\Desktop\Vebsajt\resources\views" />
@@ -246,6 +248,9 @@
       <workItem from="1582832914843" duration="1788000" />
       <workItem from="1582834739741" duration="1785000" />
       <workItem from="1582836562528" duration="704000" />
+      <workItem from="1582840495904" duration="1777000" />
+      <workItem from="1582842385313" duration="149000" />
+      <workItem from="1582876524029" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="Detalji">
       <created>1580255824916</created>

@@ -248,7 +248,7 @@ class ProductTableSeeder extends Seeder
             'price' => 9,
             'amount' => 9999,
             'type' => 'Food',
-            'subtype' => 'Pizza'
+            'subtype' => 'Italian'
         ]);
         $product->save();
         $product = new \App\Product([
@@ -319,6 +319,66 @@ class ProductTableSeeder extends Seeder
             'amount' => 9999,
             'type' => 'Food',
             'subtype' => 'Mexican'
+        ]);
+        $product->save();
+        $product = new \App\Product([
+            'imagePath' => 'https://i.ibb.co/d71TNmC/oie-ZTl1oma-Axryc.jpg',
+            'title' => 'French Fries',
+            'description' => 'Batonnet or allumette-cut deep-fried potatoes.',
+            'price' => 5,
+            'amount' => 9999,
+            'type' => 'Food',
+            'subtype' => 'Side'
+        ]);
+        $product->save();
+        $product = new \App\Product([
+            'imagePath' => 'https://i.ibb.co/M9z3tvz/oie-9ox0x-OItj78x.jpg',
+            'title' => 'Garlic Bread',
+            'description' => 'Garlic bread consists of bread, topped with garlic and olive oil or butter and may include additional herbs.',
+            'price' => 4,
+            'amount' => 9999,
+            'type' => 'Food',
+            'subtype' => 'Side'
+        ]);
+        $product->save();
+        $product = new \App\Product([
+            'imagePath' => 'https://i.ibb.co/sQXCZXn/oie-ssvsmp-Tb3r3x.jpg',
+            'title' => 'Chilli Con Carne',
+            'description' => 'A spicy stew containing chili peppers, meat, and often tomatoes and beans.',
+            'price' => 5,
+            'amount' => 9999,
+            'type' => 'Food',
+            'subtype' => 'Mexican'
+        ]);
+        $product->save();
+        $product = new \App\Product([
+            'imagePath' => 'https://i.ibb.co/72TdMFz/oie-wf-UD0oy-OMb-KP.jpg',
+            'title' => 'Spaghetti Bolognese',
+            'description' => 'Spaghetti served with a sauce made from tomatoes, minced beef, garlic, wine and herbs',
+            'price' => 5,
+            'amount' => 9999,
+            'type' => 'Food',
+            'subtype' => 'Italian'
+        ]);
+        $product->save();
+        $product = new \App\Product([
+            'imagePath' => 'https://i.ibb.co/JHWwBwY/oie-AWTMVsv-MSA3-Z.jpg',
+            'title' => 'Griled Veggies',
+            'description' => 'Grilled Vegetables',
+            'price' => 5,
+            'amount' => 9999,
+            'type' => 'Food',
+            'subtype' => 'Grill'
+        ]);
+        $product->save();
+        $product = new \App\Product([
+            'imagePath' => 'https://i.ibb.co/wgvbbW2/oie-o5-Eq-Zz99-Bh-Xz.jpg',
+            'title' => 'Omelette',
+            'description' => 'A dish made from beaten eggs fried with butter or oil in a frying pan.',
+            'price' => 5,
+            'amount' => 9999,
+            'type' => 'Food',
+            'subtype' => 'Eggs'
         ]);
         $product->save();
     }
